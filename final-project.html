@@ -9,11 +9,12 @@
   </head>
   <body>
     <!-- HEADER -->
-    <header id="first">
+    <!-- <header id="first">
       <div class="website-logo">
-        <img src="images/website-logo.svg" alt="" />
+        <img src="images/website-logo.svg" alt="website-logo" />
       </div>
-      <ul>
+      <input class="hamburger-menu" type="checkbox"></input>
+      <ul class="menu">
         <li>Home</li>
         <li>Recipes</li>
         <li>Places</li>
@@ -21,8 +22,12 @@
         <li>About</li>
         <li>Contact</li>
         <li class="search"></li>
+        <li class="search-box">
+          <img src="images/gray-search-icon.svg" alt="search-icon" />
+          <input type="search" placeholder="Search ..." />
+        </li>
       </ul>
-    </header>
+    </header> -->
     <!-- MAIN-->
     <main>
       <!-- Hero -->
@@ -44,9 +49,9 @@
               <figcaption>
                 Food Corner: Top Japanese Restaurants for Sushi
               </figcaption>
-              <div class="journal-imformation">
-                <div>admin</div>
-                <p>March 25th, 2019</p>
+              <div class="imformation">
+                <div class="admin">admin</div>
+                <div class="date">March 25th, 2019</div>
               </div>
             </figure>
             <figure>
@@ -56,9 +61,9 @@
               <figcaption>
                 Roundup: My New Favourite Recipes For Healthy Living
               </figcaption>
-              <div class="journal-imformation">
-                <div>admin</div>
-                <p>March 25th, 2019</p>
+              <div class="imformation">
+                <div class="admin">admin</div>
+                <div class="date">March 25th, 2019</div>
               </div>
             </figure>
             <figure>
@@ -66,9 +71,9 @@
                 <div class="image image3"></div>
               </div>
               <figcaption>Meal Prep: Korean Bibimbap with Kimchi</figcaption>
-              <div class="journal-imformation">
-                <div>admin</div>
-                <p>March 25th, 2019</p>
+              <div class="imformation">
+                <div class="admin">admin</div>
+                <div class="date">March 25th, 2019</div>
               </div>
             </figure>
           </div>
@@ -83,6 +88,7 @@
             Suspendisse maximus lacus non nunc lacinia lobortis.
           </p>
           <div class="recipes-inner-section">
+            <!-- main recipe -->
             <div class="main-recipe">
               <img src="images/main-recipe.jpg" alt="food-photo" />
               <h3>Lunch Favourite with Salad, Naan And Beans</h3>
@@ -103,6 +109,7 @@
               </p>
               <button>LEARN MORE</button>
             </div>
+            <!-- other recipes -->
             <div class="other-recipes">
               <div class="recipe">
                 <div class="recipe-image recipe-image1"></div>
@@ -174,19 +181,22 @@
           </div>
         </section>
         <!-- Farm To Table -->
-        <!-- <section class="farm-to-table">          <h2>FARM TO TABLE</h2>
+        <section class="farm-to-table">
+          <h2>FARM TO TABLE</h2>
           <p>
             Aliquam erat volutpat. Ut quis ligula a magna blandit finibus.
             Suspendisse maximus lacus non nunc lacinia lobortis.
           </p>
           <button>READ OUR BLOG</button>
           <div class="farm-to-table-inner-section">
+            <!-- farm to table left section -->
             <div class="farm-to-table-left-section">
               <div class="food-corner">
                 <img src="images/photo-journal1.jpg" alt="food-corner" />
                 <h3>Food Corner: Top Japanese Restaurants for Sushi</h3>
-                <div class="food-corner-imformation">
-                  admin / March 25th, 2019
+                <div class="imformation">
+                  <div class="admin">admin</div>
+                  <div class="date">March 25th, 2019</div>
                 </div>
                 <p>
                   Suspendisse at semper odio. Nam fringilla scelerisque
@@ -200,45 +210,76 @@
               </div>
               <div class="recipes">
                 <div class="recipe-magzine">
-                  <img src="images/recipe1.jpg" alt="fruit platter" />
+                  <div class="image-box">
+                    <img src="images/recipe1.jpg" alt="fruit platter" />
+                  </div>
                   <p class="title">
                     Fruit Platter with Banana, Mango, Berries and Orange
                   </p>
-                  <p class="imformation">admin / March 18th, 2019</p>
+                  <div class="imformation">
+                    <div class="admin">admin</div>
+                    <div class="date">March 18th, 2019</div>
+                  </div>
                 </div>
                 <div class="recipe-magzine">
-                  <img src="images/recipe2.jpg" alt="breakfast delight" />
+                  <div class="image-box">
+                    <img src="images/recipe2.jpg" alt="fruit platter" />
+                  </div>
                   <p class="title">
                     Breakfast Delight With Strawberry, Egg And Fruit
                   </p>
-                  <p class="imformation">admin / March 18th, 2019</p>
+                  <div class="imformation">
+                    <div class="admin">admin</div>
+                    <div class="date">March 18th, 2019</div>
+                  </div>
                 </div>
                 <div class="recipe-magzine">
-                  <img src="images/recipe3.jpg" alt="ice cream heaven" />
+                  <div class="image-box">
+                    <img src="images/recipe3.jpg" alt="fruit platter" />
+                  </div>
                   <p class="title">
                     Ice Cream Heaven With Vanilla, Chocolate And Pistachio
                   </p>
-                  <p class="imformation">admin / March 18th, 2019</p>
+                  <div class="imformation">
+                    <div class="admin">admin</div>
+                    <div class="date">March 18th, 2019</div>
+                  </div>
                 </div>
                 <div class="recipe-magzine">
-                  <img src="images/recipe4.jpg" alt="summer drink" />
+                  <div class="image-box">
+                    <img src="images/recipe4.jpg" alt="fruit platter" />
+                  </div>
                   <p class="title">
                     Video Recipe: How to Make a Cool Summer Drink
                   </p>
-                  <p class="imformation">admin / March 18th, 2019</p>
+                  <div class="imformation">
+                    <div class="admin">admin</div>
+                    <div class="date">March 18th, 2019</div>
+                  </div>
                 </div>
                 <div class="recipe-magzine">
-                  <img src="images/recipe5.jpg" alt="ketogenic diet" />
+                  <div class="image-box">
+                    <img src="images/recipe5.jpg" alt="fruit platter" />
+                  </div>
                   <p class="title">Ketogenic Diet Recipe with Avocado</p>
-                  <p class="imformation">admin / March 18th, 2019</p>
+                  <div class="imformation">
+                    <div class="admin">admin</div>
+                    <div class="date">March 18th, 2019</div>
+                  </div>
                 </div>
                 <div class="recipe-magzine">
-                  <img src="images/recipe6.jpg" alt="cosmopolitan" />
+                  <div class="image-box">
+                    <img src="images/recipe6.jpg" alt="fruit platter" />
+                  </div>
                   <p class="title">Video Recipe: The Perfect Cosmopolitan</p>
-                  <p class="imformation">admin / March 18th, 2019</p>
+                  <div class="imformation">
+                    <div class="admin">admin</div>
+                    <div class="date">March 18th, 2019</div>
+                  </div>
                 </div>
               </div>
             </div>
+            <!-- farm to table right section -->
             <div class="farm-to-table-right-section">
               <div class="lastest-recipes"></div>
               <div class="city-guide">
@@ -253,7 +294,7 @@
                 <img src="images/gray-search-icon.svg" alt="search-icon" />
                 <input type="search" placeholder="Search ..." />
               </div>
-              <div class="contact-us">
+              <div class="social-medias">
                 <div class="social-media facebook">
                   <img src="images/facebook-icon.svg" alt="facebook" />
                   <p>Facebook</p>
@@ -272,11 +313,11 @@
                 </div>
               </div>
               <div class="blogs">
-                <div class="blogs-categories">
+                <div class="blog-categories">
                   <div class="blog-category">Popular</div>
                   <div class="blog-category">Recent</div>
                 </div>
-                <div class="blogs-samples">
+                <div class="blog-samples">
                   <div class="blog">
                     <div class="blog-photo blog-photo1"></div>
                     <div class="blog-imformation">
@@ -306,7 +347,7 @@
               </div>
             </div>
           </div>
-        </section> -->
+        </section>
       </div>
       <!-- Subscribe Section -->
       <section class="subscribe-section">
@@ -348,20 +389,20 @@
       <div class="about-us">
         <div class="logo-and-social-media">
           <div class="logo"></div>
-          <div class="social-media">
-            <div class="social-media-icon facebook">
+          <div class="social-medias">
+            <div class="social-media facebook">
               <img src="images/facebook-icon.svg" alt="facebook" />
               <p>Facebook</p>
             </div>
-            <div class="social-media-icon instagram">
+            <div class="social-media instagram">
               <img src="images/instagram-icon.svg" alt="instagram" />
               <p>Instagram</p>
             </div>
-            <div class="social-media-icon twitter">
+            <div class="social-media twitter">
               <img src="images/twitter-icon.svg" alt="twitter" />
               <p>Twitter</p>
             </div>
-            <div class="social-media-icon youtube">
+            <div class="social-media youtube">
               <img src="images/youtube-icon.svg" alt="youtube" />
               <p>Youtube</p>
             </div>
