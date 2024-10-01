@@ -188,10 +188,9 @@ header ul .search {
   background: url(../images/search-icon.svg) no-repeat center;
   background-size: 70%;
 }
-.hamburger-menu {
-  display: none;
-}
-header ul .search-box {
+header ul .search-box,
+header > input,
+header > label {
   display: none;
 }
 header .website-logo:hover {
@@ -205,6 +204,7 @@ header ul li:hover {
 header ul .search:hover {
   background-image: url(../images/orange-search-icon.svg);
 }
+
 /* MAIN */
 
 /* Hero */
@@ -1108,6 +1108,91 @@ footer span:hover {
 }
 
 @media (max-width: 900px) {
+  /* HEADER */
+  header {
+    width: 80%;
+    height: 200px;
+    padding: 0 100px;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+  }
+  header .website-logo img {
+    width: 110px;
+    height: 90px;
+  }
+  header .menu {
+    width: 80%;
+    background-color: white;
+    border: 1px solid var(--orange-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 1s;
+    display: none;
+  }
+  header .menu li {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header ul li:first-child,
+  header .menu li:hover {
+    color: white;
+    background-color: var(--orange-color);
+    cursor: pointer;
+  }
+  header .menu .search {
+    display: none;
+  }
+  header .menu .search-box {
+    width: 90%;
+    margin-left: 30px;
+    margin-bottom: 15px;
+    display: block;
+  }
+  header .menu .search-box img {
+    margin-right: 20px;
+  }
+  .search-box input {
+    width: 50%;
+    font-size: 10px;
+  }
+  header .menu .search-box:hover {
+    background-color: transparent;
+    border-bottom: 1px solid gray;
+  }
+  header > label {
+    position: absolute;
+    right: 20%;
+  }
+  header > label > .menu-icon {
+    width: 50px;
+    height: 50px;
+    background: url(../images/hamburger-menu.svg) no-repeat center;
+    background-size: cover;
+  }
+  header > input,
+  header > label {
+    display: block;
+  }
+  header > input {
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+  }
+  header > input:checked ~ .menu {
+    display: block;
+    z-index: 10;
+  }
   /* Foodie Journal */
   .foodie-journal-position {
     margin-top: 120px;
@@ -1120,6 +1205,9 @@ footer span:hover {
     width: 48%;
   }
   /* Colinary Collection */
+  .colinary-collection {
+    margin-bottom: 550px;
+  }
   .collections {
     gap: 15px;
   }
@@ -1149,70 +1237,6 @@ footer span:hover {
 }
 
 @media (max-width: 767px) {
-  /* HEADER */
-  header {
-    width: 80%;
-    height: 100px;
-    flex-direction: row;
-    justify-content: space-between;
-    position: relative;
-  }
-  header .website-logo img {
-    width: 110px;
-    height: 90px;
-    margin-left: 30px;
-    margin-top: 20px;
-  }
-  header .menu {
-    width: 100%;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    top: 100%;
-    display: none;
-  }
-  header .menu li {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  header ul li:first-child,
-  header .menu li:hover {
-    color: white;
-    background-color: var(--orange-color);
-  }
-  header .menu .search {
-    display: none;
-  }
-  header .menu .search-box {
-    width: 90%;
-    display: block;
-  }
-  header .menu .search-box img {
-    margin-right: 20px;
-  }
-  header .menu .search-box:hover {
-    background-color: transparent;
-    border: none;
-  }
-  .hamburger-menu {
-    display: block;
-    width: 40px;
-    height: 40px;
-    background: url(../images/hamburger-menu.svg) no-repeat center;
-    background-size: cover;
-    position: absolute;
-    top: 50%;
-    right: 20%;
-  }
-  .haburger-menu:checked ~ .menu {
-    display: block;
-  }
   /* Hero */
   .website-title h1 {
     font-size: 1.5rem;
@@ -1289,6 +1313,13 @@ footer span:hover {
   .recipes-inner-section .other-recipes .recipe {
     width: 98%;
   }
+  /* Farm To Table */
+  .farm-to-table button {
+    width: 130px;
+    position: absolute;
+    top: 100px;
+    right: 30px;
+  }
   /* About Us */
   .about-us {
     justify-content: center;
@@ -1333,6 +1364,10 @@ footer span:hover {
     content: "";
     width: 10%;
     height: 5px;
+  }
+  /* Farm To Table */
+  .food-corner p {
+    margin-top: 50px;
   }
 }
 
